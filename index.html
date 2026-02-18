@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>72Launch | Elite Web Development Agency UAE</title>
+
+<meta name="description" content="72Launch builds high-performance, conversion-driven websites for UAE businesses. Premium execution. Fast deployment. Serious results.">
+<meta name="keywords" content="Web Development UAE, Website Design Dubai, Business Website UAE, 72Launch">
+<meta name="author" content="72Launch">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#00bfff;
+--dark1:#06101d;
+--dark2:#0d1f36;
+--glass:rgba(255,255,255,0.06);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,var(--dark1),var(--dark2));
+color:white;
+overflow-x:hidden;
+}
+
+/* Glow Background */
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,var(--primary),transparent 70%);
+top:-250px;
+left:-250px;
+filter:blur(160px);
+animation:glowMove 12s infinite alternate ease-in-out;
+z-index:-1;
+}
+
+@keyframes glowMove{
+0%{transform:translate(0,0);}
+100%{transform:translate(250px,200px);}
+}
+
+/* Navbar */
+nav{
+position:fixed;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(6,16,29,0.6);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+nav h1{
+color:var(--primary);
+font-weight:800;
+font-size:22px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+font-weight:500;
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+/* Mobile Menu */
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+nav ul{
+display:none;
+flex-direction:column;
+background:rgba(6,16,29,0.95);
+position:absolute;
+top:70px;
+right:8%;
+padding:20px;
+border-radius:12px;
+}
+nav ul.active{display:flex;}
+.menu-toggle{display:block;}
+}
+
+/* Hero */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h2{
+font-size:55px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero span{color:var(--primary);}
+
+.hero p{
+opacity:0.85;
+margin-bottom:40px;
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 40px;
+border-radius:50px;
+background:var(--primary);
+color:var(--dark1);
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+transform:translateY(-4px);
+}
+
+/* Section */
+section{
+padding:120px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:70px;
+color:var(--primary);
+}
+
+/* Cards */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:var(--glass);
+padding:40px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border:1px solid var(--primary);
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+/* Stats */
+.stats{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+gap:40px;
+text-align:center;
+}
+
+.stat h3{
+font-size:48px;
+color:var(--primary);
+}
+
+/* CTA Banner */
+.cta{
+text-align:center;
+background:linear-gradient(135deg,#00bfff22,#001f3f);
+padding:80px 20px;
+border-radius:20px;
+}
+
+.cta h2{
+margin-bottom:30px;
+font-size:30px;
+}
+
+/* WhatsApp Floating */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:16px 22px;
+border-radius:50px;
+font-weight:600;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:translateY(-4px);
+}
+
+/* Footer */
+footer{
+text-align:center;
+padding:40px;
+background:rgba(0,0,0,0.4);
+opacity:0.7;
+}
+
+@media(max-width:768px){
+.hero h2{font-size:34px;}
+.section-title{font-size:28px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>72Launch</h1>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul id="menu">
+<li><a href="#services">Services</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#why">Why Us</a></li>
+<li><a href="https://wa.me/971502984219" target="_blank">Contact</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<div class="hero-content">
+<h2>We Build <span>High-Performance Websites</span> for UAE Businesses</h2>
+<p>72Launch helps ambitious brands dominate online with fast, modern and conversion-driven digital platforms engineered for growth.</p>
+<a href="https://wa.me/971502984219" target="_blank" class="btn">Chat on WhatsApp</a>
+</div>
+</div>
+
+<section>
+<div class="stats">
+<div class="stat">
+<h3>72h</h3>
+<p>Fast Deployment</p>
+</div>
+<div class="stat">
+<h3>Premium</h3>
+<p>Modern Design</p>
+</div>
+<div class="stat">
+<h3>UAE</h3>
+<p>Market Focused</p>
+</div>
+</div>
+</section>
+
+<section id="services">
+<h2 class="section-title">Our Expertise</h2>
+<div class="grid">
+<div class="card">
+<h3>Corporate Websites</h3>
+<p>Professional websites built to establish authority and convert visitors into serious clients.</p>
+</div>
+<div class="card">
+<h3>E-Commerce Systems</h3>
+<p>Scalable online stores designed for performance, speed and seamless checkout experience.</p>
+</div>
+<div class="card">
+<h3>UI / UX Engineering</h3>
+<p>Modern interfaces crafted for trust, engagement and user retention.</p>
+</div>
+<div class="card">
+<h3>Speed Optimization</h3>
+<p>Lightning-fast performance to boost SEO rankings and reduce bounce rates.</p>
+</div>
+</div>
+</section>
+
+<section id="process">
+<h2 class="section-title">Our Launch System</h2>
+<div class="grid">
+<div class="card">
+<h3>01 Strategy</h3>
+<p>Deep analysis of your business goals and target market.</p>
+</div>
+<div class="card">
+<h3>02 Design</h3>
+<p>Crafting a powerful, high-end visual identity online.</p>
+</div>
+<div class="card">
+<h3>03 Development</h3>
+<p>Clean code, high speed and scalable infrastructure.</p>
+</div>
+<div class="card">
+<h3>04 Launch</h3>
+<p>Deployment with precision and performance testing.</p>
+</div>
+</div>
+</section>
+
+<section id="why">
+<h2 class="section-title">Why 72Launch?</h2>
+<div class="grid">
+<div class="card">
+<h3>Business-Driven Approach</h3>
+<p>We focus on results, not just visuals. Every element serves a purpose.</p>
+</div>
+<div class="card">
+<h3>Conversion Optimized</h3>
+<p>Built with psychology and strategy to turn traffic into leads.</p>
+</div>
+<div class="card">
+<h3>Modern Tech Stack</h3>
+<p>Secure, scalable and future-ready architecture.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="cta">
+<h2>Ready to Elevate Your Business Online?</h2>
+<a href="https://wa.me/971502984219" target="_blank" class="btn">Start Conversation</a>
+</div>
+</section>
+
+<a href="https://wa.me/971502984219" target="_blank" class="whatsapp">WhatsApp</a>
+
+<footer>
+© 2026 72Launch | Elite Web Development Agency UAE
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
